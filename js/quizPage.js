@@ -11,7 +11,7 @@ export class QuizPage{
     }
     randomizer(answers){
         let current = answers.length , randomer;
-        console.log(answers);
+        // console.log(answers);
         while(current!=0){
             randomer =Math.floor(Math.random()*current);
 
@@ -20,14 +20,14 @@ export class QuizPage{
            [answers[current],answers[randomer]] = [answers[randomer],answers[current]]
         }
        
-        console.log(answers);
+        // console.log(answers);
     }
     showQuiz(){
         document.getElementById('currentQuestion').innerHTML =  this.currentQuestion+1;
         document.getElementById('totalNumberOfQuestions').innerHTML = this.totalNumberOfQuestions;
         document.getElementById('question').innerHTML = this.quetsions[this.currentQuestion].question;
         let answers=[this.quetsions[this.currentQuestion].correct_answer,...this.quetsions[this.currentQuestion].incorrect_answers];
-        console.log(answers);
+        // console.log(answers);
         this.randomizer(answers);
                 let answersContainer = '';
         for(let i = 0 ; i<answers.length ; i++){

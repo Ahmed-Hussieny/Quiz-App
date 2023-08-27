@@ -5,10 +5,10 @@ body{
     background-image: linear-gradient(to right bottom, #0f2e5e, #281f42, #261529, #1a0c15, #000000);
 }
 .particles-js-canvas-el{
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
 }
 
 body{
@@ -39,6 +39,12 @@ body{
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
     -o-border-radius: 1rem;
+}
+@media screen and (max-width: 600px) {
+    #quiz-app{
+    /* background-color: rebeccapurple; */
+
+    }
 }
 #app-title{
     color: aliceblue;
@@ -109,7 +115,7 @@ body{
     align-items: center;
 }
 #finish{
-    background: linear-gradient(to right,#5e2fb4, #00ff1e);
+    background: linear-gradient(to right,#8360c3, #2ebf91);
     width: 50%;
     border-radius: 1rem;
     -webkit-border-radius: 1rem;

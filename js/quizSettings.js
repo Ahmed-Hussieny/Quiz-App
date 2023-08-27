@@ -1,5 +1,5 @@
 import { QuizPage } from "./quizPage.js";
-// https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=multiple
+// https://opentdb.com/api.php?amount=10&category=9&difficulty=easy&type=general
 
 export class QuizSettings{
     /*
@@ -24,7 +24,7 @@ export class QuizSettings{
         // document.getElementById("startBtn").addEventListener("click",()=>{this.startQuiz()})  // 3lashan el arrow function malhash el own this bta3ha
         // 2  hastakhdem bind(this)   btshil el this elly nta b3to w bt3ml this gdeda gaya mn el class
 
-        this.type=document.getElementsByName("Type");
+        // this.type=document.getElementsByName("Type");
         document.getElementById("startBtn").addEventListener("click",this.startQuiz.bind(this))        // mn gher arrow function
     }
   async  startQuiz(){
@@ -35,8 +35,8 @@ export class QuizSettings{
         // let difficulty=document.querySelector('[name="difficulty"]:checked') // hyrag3 awl haga shafha checked
 
         let numberOfQuestions =this.numberOfQuestions.value;
-        let type = Array.from(this.type).find((e)=>e.checked).value;
-        const API = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}&type=${type}`
+        // let type = Array.from(this.type).find((e)=>e.checked).value;
+        const API = `https://opentdb.com/api.php?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}`
         let questions=await this.feachData(API);
         if(questions.length>0){
             $('#alert1').hide(0);
